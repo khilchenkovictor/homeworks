@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця Мондріана</title>
+    <style>
+    td {
+        border: 4px solid black;
+        width: 80px;
+        height: 80px;
+    }
+    </style>
+</head>
+<body>
+    <!--  -->
+    <table style="border: 3px solid black; border-collapse: collapse; width: 600px;">
+        <tr> <!---строка 1--->
+            <td colspan="2" style="background-color: white; height: 70px; width: 60px;"></td>
+            <td colspan="2" style="background-color: white; height: 60px;"></td>
+            <td colspan="2" style="background-color: yellow; height: 60px;"></td>
+            <td rowspan="4" style="width: 30px;"></td>
+        </tr>
+        <tr> <!---строка 2--->
+            <td rowspan="3" style="background-color: white; width: 70px;"></td>
+            <td colspan="3" rowspan="2" style="background-color: red; height: 300px; width: 200px;"></td>
+            <td colspan="2" style="background-color: yellow;"></td>
+        </tr>
+        <tr> <!---строка 3--->
+            <td></td>
+            <td></td>
+        </tr>
+        <tr> <!---строка 4--->
+            <td colspan="2" rowspan="2" style="background-color: black;"></td>
+            <td style="width: 140px;"></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr> <!---строка 5--->
+            <td rowspan="3" style="background-color: yellow; width: 70px;"></td>
+            <td style="width: 140px;"></td>
+            <td colspan="2" rowspan="2" style="background-color: blue;"></td>
+            <td rowspan="3" style="background-color: red; width: 30px;"></td>
+        </tr>
+        <tr> <!---строка 6--->
+            <td colspan="2" rowspan="2"></td>
+            <td style="background-color: black; height: 10px;"></td>
+        </tr>
+        <tr> <!---строка 7--->
+            <td colspan="3" style="height: 10px;"></td>
+        </tr>
+    </table>
+</body>
+</html>

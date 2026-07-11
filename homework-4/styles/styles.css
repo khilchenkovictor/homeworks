@@ -1,0 +1,101 @@
+
+
+/* Селектор тега, застосовується до всіх тегів p. Вага: 1 */
+p {
+    color: red;
+}
+
+/*Селектор тега, застосовується до всіх тегів li. Вага: 1 */
+li {
+    list-style: none;
+}
+
+/* Селектор класу, застосовується до класу .main-text. Вага: 10 */
+.main-text {
+    color: blue;
+}
+
+/* Селектор по id застосовується до конкретного id="link-2". Вага 100 */
+#link-2 {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Селектор по тегу позначається основний елемент і сусідній, який і редагується. Вага: 2*/
+h1 + h2 {
+    padding: 20px;
+    border: solid 3px black;
+} 
+
+/* Селектор по вкладеному тегу p в тег footer. 
+Стиль color: red не приміняється так як вага цього селектору більша Вага: 2*/
+footer > p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 1px grey;
+    color: violet;
+}
+
+/* Селектор по тегу які йдуть одразу після вказаного id на одному рівні. Вага: 101 */
+#link-2 ~ li {
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px;
+    margin: 4px;
+    background-color: aqua;
+}
+
+/* Вибираємо всі теги li всередині класа .new-list Вага 11 */
+.new-list li {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Селектор за тегом а. Вага 1 */
+a {
+    text-decoration: none;
+    color: brown;
+}
+
+/* Вибираємо теги а, де в шляху є "str" Вага 11, перебиває css по тегу а на строці 54 з вагою 1 */
+a[href*="str"] {
+    text-decoration: overline;
+    color: cadetblue;
+}
+
+/* Звернення по атрибуту по кнопке Вага 11*/
+input[type="submit"] {
+    padding: 20px;
+    border: 3px solid green;
+    margin: 10px;
+    background-color: orangered;
+    font-size: 120%;
+    cursor: pointer;
+    color: white;
+}
+
+/* Звернення к класу + псевдоклас, вага 20 */
+.button-1:hover {
+    background-color: yellow;
+    font-size: 120%;
+    color: white;
+    text-shadow: 0 1px 3px black;
+}
+
+/* Селектор Ідентифікатора + класса Вага 101 */
+span#txt-1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 1px 1px red;
+
+}
+
+/* тег та Псевдоэлемент вага 1 */
+h3::first-letter {
+    font-size: 150%;   
+}
+
+/* Класс + id Вага 110 */
+.additionally#element {
+    color: red;
+    font-size: 30px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG figures</title>
+
+    <style>
+        .square {
+            stroke-width: 5px;
+            animation: colorchange 5s ease-in-out infinite;
+        }
+
+        @keyframes colorchange {
+            0% { stroke: black; fill: aqua; }
+            50% { stroke: grey; fill: rgb(236, 255, 255) }
+            100% { stroke: rgb(205, 193, 193); fill: rgb(26, 107, 213)} 
+        }
+
+    </style>
+
+</head>
+<body style="display: flex;">
+<svg width="200" height="200">
+  <rect class="square" x="25" y="25" width="150" height="150" style="fill:aqua; stroke-width: 5px; stroke: black"/>
+</svg>
+<svg width="200" height="200">
+  <rect class="rectangle" x="25" y="50" width="150" height="80" style="fill:green; stroke-width: 5px; stroke: yellow"/>
+</svg>
+<svg width="200" height="200">
+  <circle class="circle" cx="100" cy="100" r="70" style="stroke: purple; stroke-width: 5; fill: red" />
+</svg>
+<svg width="250" height="250">
+  <ellipse class="ellipse" cx="110" cy="100" rx="100" ry="60" style="stroke: orange; stroke-width: 5; fill: blue" />
+</svg>
+</body>
+</html>

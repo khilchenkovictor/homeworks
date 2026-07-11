@@ -1,0 +1,44 @@
+@mixin nornal() {
+    font-family: 'roboto-regular';
+    font-weight: 400;
+    line-height: 1;
+}
+
+@mixin text() {
+    font-family: "roboto-regular";
+    font-weight: 400;
+    line-height: 141%;
+}
+
+@mixin semibold() {
+    font-family: 'roboto-medium';
+    font-weight: 500;
+    line-height: 1;
+}
+
+@mixin bold() {
+    font-family: 'roboto-medium';
+    font-weight: 700;
+    line-height: 1;
+}
+
+@mixin flex-center-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin margin-horizontal-auto() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin margin-vertical-auto() {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@mixin flex-space-between() {
+    display: flex;
+    justify-content: space-between;
+}

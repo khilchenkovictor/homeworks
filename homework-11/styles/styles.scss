@@ -1,0 +1,222 @@
+@import "./mixins";
+@import "./variables";
+@import "./layout";
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('../fonts/roboto-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-medium';
+    src: url('../fonts/roboto-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container {
+
+    background-color: $gray-extra-light;
+}
+
+.menu {
+
+    background-color: $gray-extra-light;
+
+    .main-menu {
+            padding-top: 17px;
+            padding-bottom: 16px;
+
+
+        .menu-links {
+            @include margin-horizontal-auto();
+            width: 360px;
+            @include flex-center-center();
+            gap: 30px;
+
+            .menu-link a {
+                text-transform: capitalize;
+                @include nornal();
+                font-size: 14px;
+                color: $dark-grey;
+
+                &:hover {
+                    color: $pink;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.submenu {
+    
+    background-color: $white;
+
+    .second-menu {
+
+
+        .menu-links {
+            @include margin-horizontal-auto();
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 584px;
+            @include flex-space-between();
+            align-items: center;
+            gap: 40px;
+        }
+
+        .menu-link a {
+            color: $black;
+            text-transform: capitalize;
+            @include nornal();
+            font-size: 16px;
+        }
+    }
+}
+
+.impulse {
+
+    .impulse-blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1px;
+        height: 357px;
+
+        .impulse-block {
+            background-color: $white;
+            @include flex-center-center();
+
+            img {
+                width: 149px;
+                height: 49px;
+            }
+        }
+    }
+
+}
+
+.viewed {
+
+    .card {
+        margin-bottom: 80px;
+    }
+}
+
+
+@media (max-width: $tablet) {
+    .container .content {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .hero {
+
+        .content {
+            padding: 92px 0 93px;
+            padding-left: 10px;
+        }
+
+        .product {
+            border: 45px solid $pink-light;
+            width: 450px;
+            height: 450px;
+
+            img {
+                width: 187px;
+                height: 265px;
+            }
+        }
+    }
+
+    .logo {
+        .content {
+            width: auto;
+        }
+
+        .logo-block {
+            margin-left: 10px;
+        }
+
+        .contacts {
+            margin-right: 10px;
+        }
+    }
+
+    .offers, .viewed {
+
+        .title {
+            text-align: center;
+        }
+
+        .cards {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .info {
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .info-block {
+            margin: 0;
+        }
+    }
+
+    .impulse {
+        .content {
+            @include flex-center-center();
+        }
+        .impulse-blocks {
+            height: 250px;
+
+            .impulse-block {
+                .impulse-icon {
+                    width: 100px;
+                    height: 33px;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+
+    .viewed {
+        .card {
+            &:first-child,
+            &:nth-child(2) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer-copyrights {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        justify-content: center;
+
+
+        .discription {
+            padding: 0px;
+
+            &:first-child {
+                padding-top: 20px;
+            }
+
+            &:last-child {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

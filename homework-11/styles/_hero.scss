@@ -1,0 +1,60 @@
+@import "./mixins";
+@import "./variables";
+@import "./layout";
+
+.hero {
+    overflow: hidden;
+    background-color: $pink;
+    
+    .content {
+        padding: 192px 0 193px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .product {
+        border: 85px solid $pink-light;
+        background-color: $pink-extra-light;
+        width: 650px;
+        height: 650px;
+        border-radius: 50%;
+        @include flex-center-center();
+        position: absolute;
+        right: -55px;
+    }
+
+    .title {
+        color: $white;
+        @include bold();
+        font-size: 48px;
+        margin-bottom: 50px;
+    }
+
+    .discription {
+        font-size: 14px;
+        color: $white;
+        @include nornal();
+        margin-bottom: 30px;
+        width: 230px;
+        line-height: 25px;
+    }
+
+    .more.button{
+        font-size: 14px;
+        color: $white;
+        @include nornal();
+        background-color: transparent;
+        border: 2px solid $white;
+        border-radius: 40px;
+        letter-spacing: 5%;
+        cursor: pointer;
+        display: inline-block;
+        width: 170px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}

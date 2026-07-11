@@ -1,0 +1,86 @@
+@import "./mixins";
+@import "./variables";
+@import "./layout";
+
+.info {
+
+    .content {
+        @include flex-space-between();
+        gap: 30px;
+    }
+
+    .mail-icon {
+        width: 140px;
+        height: 140px;
+        margin-right: 45px;
+        @include margin-vertical-auto();
+    }
+
+    .track-icon {
+        width: 189px;
+        height: 100px;
+        margin-right: 45px;
+        @include margin-vertical-auto();
+        justify-content: end;
+    }
+
+    .info-block {
+        @include flex-space-between();
+        width: 540px;
+        height: 212px;
+        background-color: $pink;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .title {
+        @include bold();
+        font-size: 18px;
+        color: $white;
+        margin-top: 35px;
+        margin-bottom: 25px;
+    }
+
+    .discription {
+        @include text();
+        font-size: 14px;
+        color: $white;
+        margin-bottom: 25px;
+        width: 130px;
+    }
+
+    .info-text {
+        margin-left: 40px;
+    }
+
+    .store-map {
+        display: block;
+        text-align: center;
+        line-height: 35px;
+        width: 170px;
+        height: 35px;
+        border: 2px solid $white;
+        border-radius: 30px;
+        background: transparent;
+        color: $white;
+        text-align: center;
+        font-size: 14px;
+        width: 170px;
+        height: 35px;
+        font-size: 14px;
+        @include nornal();
+        line-height: 35px;
+    }
+
+    .email-input {
+        height: 35px;
+        width: 200px;
+        border: none;
+        border-radius: 30px;
+        padding-left: 25px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.trust {
+
+    .content {
+        background-color: $white
+        
+    }
+
+    &__title {
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        line-height: 100%;
+        font-family: Montserrat;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        color: rgba(50, 50, 100, 1);
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    &__partners {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 120px 120px 120px;
+        border-radius: 12px;
+        background-color: $white;
+        overflow: hidden;
+        height: auto;
+
+        @media (max-width: 1457px) {
+                border-radius: 0%;
+            }
+
+        @media (max-width: map-get($breakpoints, tablet-lg)) {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 120px 120px 120px 120px;
+            }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+                grid-template-columns: 1fr;
+                grid-template-rows: 120px 120px 120px 120px 120px 120px;
+            }
+    }
+
+    &__partner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--hillel {
+            background-color: rgba(28, 66, 128, 1);
+        }
+        
+        &--wannabiz {
+            background-color: rgba(20, 54, 70, 1);
+        }
+
+        &--tapgerine {
+            background-color: rgba(244, 139, 48, 1)
+        }
+
+        &--3dlook {
+            background-color: rgba(158, 77, 195, 1);
+        }
+
+        &--orangear {
+            background-color: rgba(253, 147, 57, 1);
+        }
+
+        &--adtelligent {
+            background-color: rgba(226, 226, 228, 1);
+        }
+
+        &--clickky {
+            background-color: rgba(199, 28, 54, 1);
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                display: none;
+            }
+        }
+
+        &--ecoleasing {
+            background-color: rgba(220, 243, 249, 1);
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                display: none;
+            }
+        }
+
+        &--infratek {
+            background-color: rgba(234, 234, 234, 1);
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                display: none;
+            }
+        }
+
+        &--citypark {
+            background-color: rgba(40, 34, 64, 1);
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                display: none;
+            }
+        }
+
+        &--artprint {
+            background-color: rgba(29, 69, 104, 1);
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                display: none;
+            }
+        }
+
+        &--ultimate {
+            background-color: rgba(0, 0, 0, 1);
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                display: none;
+            }
+        }
+    }
+
+}

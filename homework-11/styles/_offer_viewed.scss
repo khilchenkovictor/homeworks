@@ -1,0 +1,67 @@
+@import "./mixins";
+@import "./variables";
+@import "./layout";
+
+.offers, .viewed {
+
+    padding-top: 80px;
+
+    .title {
+        @include bold();
+        color: $black;
+        font-size: 24px;
+        margin-bottom: 38px;
+    }
+
+    .cards {
+        @include flex-space-between();
+        gap: 30px;
+    }
+
+    .card {
+        width: 255px;
+        height: 363px;
+        background-color: $white;
+    }
+    
+    .card-picture {
+        width: 125px;
+        height: 166px;
+        margin: 25px 65px 20px 65px;
+    }
+
+    .discription {
+        @include nornal();
+        color: $black;
+        font-size: 14px;
+        text-align: center;
+        width: 195px;
+        @include margin-horizontal-auto();
+        margin-bottom: 20px;
+    }
+
+    .price {
+        @include semibold();
+        color: $black;
+        font-size: 21px;
+        letter-spacing: 5%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        width: 130px;
+        height: 35px;
+        background-color: $pink;
+        border-radius: 30px;
+        border: none;
+        @include margin-horizontal-auto();
+        display: block;
+        @include nornal();
+        color: $white;
+        text-transform: capitalize;
+        text-align: center;
+        cursor: pointer;
+        line-height: 35px;
+    }
+}

@@ -1,0 +1,201 @@
+.header {
+    z-index: 2;
+    @media (max-width: map-get($breakpoints, mobile)) {
+        padding: {
+            left: 15px;
+            right: 15px;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-areas:
+            "logo contacts"
+            "logo menu"
+        ;
+        padding-top: 50px;
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            grid-template-areas: 
+                "contacts"
+                "logo"
+                "menu"
+            ;
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            grid-template-areas:
+                "contacts contacts"
+                "logo hamburger"
+            ;
+            padding-top: 0;
+        }
+    }
+
+
+    &__logo {
+        grid-area: logo;
+        width: fit-content;
+        height: fit-content;
+        
+        @media (max-width: map-get($breakpoints, tablet)) {
+            margin-left: initial;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            width: 70px;
+            margin-top: 15px;
+            margin-bottom: 0;
+
+            img {
+               width: 100%; 
+            }
+        }
+    }
+
+    &__contacts {
+        grid-area: contacts;
+        width: fit-content;
+        margin-left: auto;
+        display: flex;
+        margin-bottom: 16px;
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            margin-left: initial;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            background-color: rgba(245, 245, 250, 0.2);
+            padding: {
+                top: 10px;
+                bottom: 10px;
+                left: 15px;
+                right: 15px;
+            };
+            width: calc(100% + 60px);
+            margin-left: -30px;
+            box-sizing: border-box;
+            margin-bottom: 0;
+        }
+    }
+
+    &__menu {
+        grid-area: menu;
+        width: fit-content;
+        margin-left: auto;
+        height: fit-content;
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            margin-left: initial;
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            display: none;
+
+        }
+
+    }
+
+    &__hamburger {
+        display: none;
+        height: 32px;
+        width: 32px;
+        grid-area: hamburger;
+        margin-left: auto;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            display: flex;
+
+        }
+
+        div {
+            width: 18px;
+            height: 18px;
+            border-top: 2.5px solid $white;
+            border-bottom: 2.5px solid $white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-top: 12.5px;
+
+            &:after {
+                content: '';
+                background-color: $white;
+                width: 18px;
+                height: 2px;
+                position: absolute;
+
+            }
+        }
+    }
+
+    &__languages {
+        display: flex;
+        
+        @include headerDot();
+    }
+
+    &_language {
+
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        color: $white;
+        width: 33px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: none;
+
+        &--active {
+            background-color: rgb(240, 20, 90);
+            pointer-events: none;
+        }
+
+        &:hover {
+            background-color: palevioletred;
+            transition: background-color 0.5s;
+        }
+    }
+
+    &__address {
+        @include headerDot();
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            display: none;
+        }
+
+    }
+
+    &__callback {
+        @include whiteBoldText();
+        @include headerDot();
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            margin-left: auto;
+        }
+    }
+
+    &__fb {
+        @media (max-width: map-get($breakpoints, mobile)) {
+            display: none;
+        }
+    }
+
+    &__menu-list {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__menu-link {
+        @include whiteBoldText();
+    }
+}

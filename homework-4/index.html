@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Сторінка 1</title>
+    <style>
+        .span-end {
+            color: green;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Основний заголовок</h1>
+        <h2>Селектор по тегу позначається основний елемент і сусідній, який і редагується. Вага: 2</h2>
+    </div>
+
+    <div>
+        <h3>тег та Псевдоэлемент вага 1</h3>
+        <p class="main-text">Селектор класу, застосовується до класу .main-text. Вага: 10</p>
+            <div>
+                <ul>
+                    <li>Застосовується "list-style: none;" до всіх тегів li. Вага: 1</li>
+                    <li id="link-2">Селектор по id застосовується до конкретного id="link-2". Вага 100</li>
+                    <li>Селектор по тегу які йдуть одразу після вказаного id на одному рівні. Вага: 101</li>
+                    <li>Селектор по тегу які йдуть одразу після вказаного id на одному рівні. Вага: 101</li>
+                    <li>Селектор по тегу які йдуть одразу після вказаного id на одному рівні. Вага: 101</li>
+                </ul>
+                <span class="additionally" id="element">Класс + id Вага 110</span>
+            </div>
+    </div>
+
+    <div style="padding: 40px;">
+        <ul class="new-list">
+            <li><a href="https://example.com/pages/str1">Вибираємо теги а, де в шляху є "str" Вага 11, перебиває css по тегу а на строці 54 з вагою 1</a></li>
+            <li><a href="https://example.com/index.html">Селектор за тегом а. Вага 1</a></li>
+            <li><a href="https://example.com/pages/str2">Вибираємо теги а, де в шляху є "str" Вага 11, перебиває css по тегу а на строці 54 з вагою 1</a></li>
+            <li><a href="https://example.com/images/photo12345.jpg">Селектор за тегом а. Вага 1</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <input type="submit" class="button-1" value="Обращение по атрибуту к кнопке Вага 11">
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <span class="block-text"> стилей <span id="txt-1">Селектор Ідентифікатора + класса Вага 110</span> не применено</span>
+    </div>
+
+
+    <div>
+        <p style="color: darkblue; ">Вбудований стиль ВАГА 1000</p>
+            <footer>
+                <span class="span-end">Селектор за класом Вага 10</span>
+                    <p>Селектор по вкладеному тегу p в тег footer. Стиль color: red не приміняється так як вага цього селектору більша Вага: 2</p>
+            </footer>
+    </div>
+</body>
+</html>

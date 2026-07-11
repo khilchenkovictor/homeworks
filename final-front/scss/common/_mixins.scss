@@ -1,0 +1,80 @@
+@mixin text() {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: $black;
+}
+
+@mixin headerDot() {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+
+    &::after {
+        content: '';
+        background-color: rgb(230, 230, 240);
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: calc(100% + 6px);
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            content: none;
+        }
+    }
+
+}
+
+@mixin whiteBoldText() {
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+}
+
+@mixin input() {
+    border: solid 1px $white;
+    border-radius: 8px;
+    color: $black;
+    line-height: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 15px 0 15px 15px;
+    font-family: "Montserrat", sans-serif;
+
+    &::placeholder {
+        color: rgba(179, 179, 186, 1);
+    }
+
+}
+
+@mixin blueButton() {
+        color: $white;
+        background-color: rgba(36, 163, 255, 1);
+        border-radius: 12px;
+        border: none;
+        padding: {
+            top: 18px;
+            bottom: 18px;
+        };
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 700;
+        box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+        cursor: pointer;
+}
+
+@mixin gradientText() {
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 95.96%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}

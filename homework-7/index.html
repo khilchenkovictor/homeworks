@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пункт 2 і 7</title>
+    <style>
+        .index-block {
+            border: 3px solid black;
+            margin: 20px;
+            background-color: yellowgreen;
+            width: 80px;
+            height: 80px;
+            padding: 3px;
+            text-align: center;
+        }
+        
+        .block-in-text {
+            display: inline-block;
+            width: 80px; 
+            height: 80px; 
+            border: 1px solid black;
+            padding: 3px;
+            margin: 3px;
+        }
+        
+        .bottom-block {
+            display: inline-block;
+            border: 3px solid black;
+            background-color: green;
+            width: 80px;
+            height: 80px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        
+        .bottom-container {
+            margin: 30px;
+            text-align: center;
+        }
+        
+        .span-bottom {
+            font-size: 20px;
+        }
+
+        /* позіціонування */
+        .sticky-block {
+            position: sticky; top: 10px; background: lightblue;
+        }
+
+        .relative-block {
+            position: relative; 
+            top: 50px;
+            width: 400px;
+            margin-right: auto;
+            margin-left: auto;
+            background: lightgreen;
+
+        }
+
+        .fixed-block {
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            background: orange;
+        }
+
+        .span-fixed {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: burlywood;
+        }
+
+        .span-sticky {
+            position: sticky;
+            top: 10px;
+            background-color: pink;
+        }
+
+        .absolute-block {
+            position: absolute;
+            top: 100px;
+            left: 200px;
+            background: purple;
+            width: 120px;
+            height: 120px;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+        }
+ 
+        .static-block {
+            position: static;
+            background: gray;
+            width: 80px;
+            height: 80px;
+            margin: 90px;
+            text-align: center;
+            color: white;
+            line-height: 80px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="index-block"></div>
+    <div class="index-block"></div>
+    <div class="index-block"><span>Текст для блока 3</span></div>
+    
+    <span>Contrary to popular belief, Lorem <div class="block-in-text">Ipsum is not simply random</div> text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</span>
+    
+    <div class="bottom-container">
+        <div class="bottom-block"></div>
+        <div class="bottom-block"></div>
+        <div class="bottom-block"></div>
+    </div>
+    
+    <div style="position: relative; height: 300px; border: 3px solid red; margin: 50px;">
+        <div class="sticky-block">STICKY - прилипне при прокрутки до верху, але тільки в межах блока з червоним бордером</div>
+        <div class="relative-block">RELATIVE - вниз на 50px від блок з червоним бордером</div>
+        <div class="fixed-block">FIXED - в кутку екрана</div>
+        <div class="absolute-block">ABSOLUTE</div>
+        <div class="static-block">STATIC</div>
+    </div>
+    
+    <span class="span-bottom">Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin <span class="span-sticky">professor at Hampden-Sydney College</span> in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</span>
+    <span class="span-fixed">Текст в лівому нижньому кутку через спан</span>
+
+    <span style="font-size: 60px">Where can I get some? There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</span>
+
+</body>
+</html>

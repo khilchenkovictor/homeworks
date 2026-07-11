@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    
+    <div id="app">
+        <div id="slider-container">
+
+            <div class="control-block">
+                <div class="control" id="play">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="#9b9a9c">
+                        <path d="M4 2L12 8L4 14V2Z"/>
+                    </svg>
+                </div>
+                <div class="control" id="stop">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="#9b9a9c">
+                        <rect x="3" y="2" width="3" height="12"/>
+                        <rect x="10" y="2" width="3" height="12"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="slider-button" id="prev">
+                <div class="slider-left"></div>
+            </div>
+
+            <div class="viewport" id="slider">
+                <div id="slider-track">
+                    <div class="slide">
+                        <img src="./images/picture-1.jpg" alt="1">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/picture-2.jpg" alt="2">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/picture-3.jpg" alt="3">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/picture-4.jpg" alt="4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-button" id="next">
+                <div class="slider-right"></div>
+            </div>
+
+            <div id="dots"></div>
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>

@@ -1,0 +1,170 @@
+.page-services {
+
+    .news {
+        margin-top: 80px;
+    }
+
+    .header {
+
+        &__logo {
+            display: flex;
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                width: auto !important;
+
+                img {
+                    width: auto;
+                    height: 32px;
+                }
+            }
+        }
+
+        &__menu {
+
+            &-link {
+                &--active {
+                    font-weight: 700;
+                    font-size: 16px;
+                    color: rgba(240, 20, 90, 1);
+                    border-bottom: 2px solid rgba(240, 20, 90, 1);
+                    padding-bottom: 3px;
+                }
+            }
+        }
+
+        &__slash {
+            width: 7px;
+            height: 47px;
+            background: #f0145a;
+            transform: skewX(-24deg);
+            margin-left: 18px;
+            margin-right: 14px;
+            display: inline-block;
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                height: 32px;
+                margin-left: 12px;
+                margin-right: 10px;
+                width: 4px;
+                height: 27px;
+            }
+        }
+
+        &__page {
+            font-weight: 400;
+            font-size: 36px;
+            color: $white;
+            line-height: 44px;
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+            
+        }
+    }
+
+    .hero {
+
+        margin-top: 60px;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 60px;
+        }
+
+        &__img {
+            width: 92px;
+            height: 92px;
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 24px;
+            margin-bottom: 28px;
+        }
+
+        &__name {
+            @include gradientText();
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 45px;
+            margin-bottom: 28px;
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                font-size: 30px;
+            }
+        }
+
+        &__description {
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 19px;
+                line-height: 30px;
+                font-weight: 400;
+
+        }
+
+        &__button {
+            @include blueButton();
+            padding: {
+                left: 30px;
+                right: 30px;
+            };
+            margin-top: 8px;
+
+        }
+    }
+
+    .list {
+
+        .content {
+            border-top: solid 4px rgba(255, 255, 255, 0.5);
+            margin-bottom: 60px;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 22px;
+            color: $white;
+            margin: {
+                top: 30px;
+                bottom: 30px;
+            };
+        }
+
+        &__block {
+            display: flex;
+            gap: 60px;
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+
+        &__left, &__right {
+            display: flex;
+            flex-direction: column;
+            list-style-type: disc;
+            gap: 15px;
+            padding-left: 20px;
+            flex: 1;
+
+        }
+
+        &__element {
+            font-weight: 400;;
+            font-size: 18px;
+            line-height: 26px;
+
+            &::marker {
+                color: rgba(240, 20, 90, 1);
+                font-size: 16px;
+            }
+        }
+    }
+}

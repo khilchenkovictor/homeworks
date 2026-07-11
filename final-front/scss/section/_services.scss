@@ -1,0 +1,83 @@
+.services {
+
+    padding-bottom: 60px;
+    
+    .content {
+        padding {
+            top: 60px;
+            bottom: 60px;
+        };
+    }
+
+    &__link {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: rgba(36, 163, 255, 1);
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+
+        &:after {
+            content: '>';
+            position: absolute;
+            display: block;
+            left: calc(100% + 5.5px);
+        }
+
+        &:hover {
+            background: rgba(240, 20, 90, 1);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 100%;
+        margin-bottom: 60px;
+        pointer-events: none;
+         @include gradientText();
+}
+
+    &__offers {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+
+    &__offer {
+        width: calc(100% / 3 - 40px);
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            width: calc(100% / 2 - 40px);
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        box-sizing: border-box;
+        width: 92px;
+        height: 92px;
+        padding: 14px;
+        border-radius: 24px;
+        background: $white;
+        margin-bottom: 44px;
+    }
+
+    &__offer-title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 100%;
+        color: rgba(36, 163, 255, 1);
+        margin-bottom: 15px;
+    }
+
+    &__description {}
+}

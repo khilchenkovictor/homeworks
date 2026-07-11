@@ -1,0 +1,59 @@
+@import "./mixins";
+@import "./variables";
+@import "./layout";
+
+.logo {
+    border-bottom: 1px solid $gray-extra-light;
+    background-color: $white;
+
+    .content {
+        @include flex-space-between();
+
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+        }
+
+        .logotype-text {
+            margin-left: 20px;
+            color: $pink;
+            text-transform: uppercase;
+            @include bold();
+            letter-spacing: 10%;
+            font-size: 36px;
+        }
+
+
+        .contacts {
+            display: flex;
+
+            .callback {
+                @include flex-center-center();
+                width: 170px;
+                height: 40px;
+                margin: 40px 0px 40px 40px;
+                border-radius: 40px;
+                border: 2px solid $pink;
+                background-color: $white;
+                cursor: pointer;
+                text-align: center;
+                color: $black;
+                @include nornal();
+                font-size: 14px;
+            }
+
+            .contacts-panel {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .contacts-panel a {
+                color: $black;
+                text-transform: capitalize;
+                @include nornal();
+                font-size: 16px;
+            }
+        }
+    }
+}

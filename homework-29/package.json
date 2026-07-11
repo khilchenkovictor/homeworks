@@ -1,0 +1,15 @@
+{
+  "name": "homework-29",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}

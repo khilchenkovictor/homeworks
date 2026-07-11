@@ -1,0 +1,82 @@
+.container {
+    .content {
+        width: map-get($content-width, desktop-lg);
+        margin: 0 auto;
+
+        @media (max-width: map-get($breakpoints, desktop)) {
+            width: map-get($content-width, desktop);
+        }
+
+        @media (max-width: map-get($breakpoints, tablet-lg)) {
+            width: map-get($content-width, tablet-lg);
+        }
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            width: map-get($content-width, tablet);
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            width: map-get($content-width, mobile);
+        }
+    }
+
+    &.trust {
+
+         @media (max-width: map-get($breakpoints, mobile)) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .content {
+            width: calc(map-get($content-width, desktop-lg) + 50px);
+            margin: 0 auto;
+
+            @media (max-width: map-get($breakpoints, desktop)) {
+                width: calc(map-get($content-width, desktop) + 120px);
+            }
+
+            @media (max-width: 1457px) {
+                width: 100%;
+            }
+
+            @media (max-width: map-get($breakpoints, tablet-lg)) {
+                width: 100%;
+            }
+
+            @media (max-width: map-get($breakpoints, tablet)) {
+                width: 100%;
+            }
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                width: 100% 
+            }
+        }
+    }
+}
+
+.page-services {
+    
+    .hero, .list {
+        .content {
+            width: map-get($content-width, desktop-lg);
+            width: 1360px;
+
+            @media (max-width: map-get($breakpoints, desktop)) {
+                width: (map-get($content-width, desktop) - 240px);
+            }
+
+            @media (max-width: map-get($breakpoints, tablet-lg)) {
+                width: map-get($content-width, tablet-lg);
+            }
+
+            @media (max-width: map-get($breakpoints, tablet)) {
+                width: map-get($content-width, tablet);
+            }
+
+            @media (max-width: map-get($breakpoints, mobile)) {
+                width: map-get($content-width, mobile);
+            }
+
+        }
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пункт 4</title>
+    <style>
+        [class^="container-"] {
+            display: flex;
+            padding: 40px;
+            margin: 10px;
+        }
+        .container-1 {
+            justify-content: center;
+            border: 3px solid black;
+        }
+
+        .container-2 {
+            justify-content: space-between;
+            border: 3px solid red;
+        }
+
+        .container-3 {
+            border: 3px solid rgb(16, 191, 57);
+            height: 300px;
+
+        }
+
+        .container-4 {
+            justify-content: flex-end;
+            border: 3px solid blue;
+
+        }
+
+        .container-5 {
+            justify-content: space-around;
+            border: 3px solid saddlebrown;
+        }
+
+        .flex-training {
+            text-align: center;
+            margin: 50px;
+            height: 60px;
+            width: 60px;
+            border: 3px solid black;
+            line-height: 60px;
+            border-radius: 5px;
+            background-color: coral;
+        }
+
+        .inline-content {
+            display: inline;
+            width: 150px;
+            height: 40px;
+            border: 3px double black;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 80px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        [class$="-box"] {
+            margin: 40px auto;
+            border: 3px dotted orangered;
+            width: 300px;
+            height: 300px;
+            padding: 30px;
+        }
+
+        .text-in {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Flex training</h2>
+    <div class="container-1">
+        <div class="flex-training" style="order: 2">1</div>
+        <div class="flex-training">2</div>
+        <div class="flex-training">3</div>
+        <div class="flex-training">4</div>
+        <div class="flex-training">5</div>
+    </div>
+
+     <div class="container-2">
+        <div class="flex-training">1</div>
+        <div class="flex-training">2</div>
+        <div class="flex-training">3</div>
+        <div class="flex-training">4</div>
+        <div class="flex-training">5</div>
+    </div>
+
+     <div class="container-3">
+        <div class="flex-training">1</div>
+        <div class="flex-training">2</div>
+        <div class="flex-training">3</div>
+        <div class="flex-training">4</div>
+        <div class="flex-training">5</div>
+    </div>
+
+     <div class="container-4">
+        <div class="flex-training">1</div>
+        <div class="flex-training">2</div>
+        <div class="flex-training">3</div>
+        <div class="flex-training">4</div>
+        <div class="flex-training" style="flex-grow: 1;">5</div>
+    </div>
+
+    <div class="container-5">
+        <span class="inline-content">text 1</span>
+        <span class="inline-content">text 2</span>
+        <span class="inline-content">text 3</span>
+        <span class="inline-content">text 4</span>
+    </div>
+
+    <h2>Box-sizing training</h2>
+        <div class="border-box"><span class="text-in"></span></div>
+        <div class="content-box"><span class="text-in"></span>Текст 2</span></div>
+
+</body>
+</html>

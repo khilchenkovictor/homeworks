@@ -1,0 +1,149 @@
+#app {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #slider-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            align-items: center;
+            justify-items: center;
+            grid-template-areas:
+                "control control control"
+                "prev slider next"
+                "dots dots dots";
+        }
+
+        .viewport {
+            overflow: hidden;
+        }
+
+        #slider-track {
+            display: flex;
+            flex-direction: row;
+            transition: transform 0.2s;
+        }
+
+        .slider-button {
+            display: flex;
+            width: 70px;
+            height: 70px;
+            padding: 3px;
+            border: 3px solid #fcfcfb;
+            border-radius: 50%;
+            background-color: #eaeaea;
+            outline: 1px solid #9b9a9c;
+            box-shadow: 0 2px 2px 2px #bfbebe;
+            margin: 20px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .slider-button:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s;
+        }
+
+        .slider-left, .slider-right {
+            width: 24px;
+            height: 24px;
+            border-top: 5px solid #a0a09f;
+            border-right: 5px solid #a0a09f;
+            margin-right: 6px;
+            transform: rotate(45deg);
+        }
+
+        .slider-left {
+            transform: rotate(-135deg);
+            margin-left: 12px;
+        }
+
+        #dots {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+            grid-area: dots;
+            gap: 15px;
+        }
+
+        #prev { 
+            grid-area: prev; 
+        }
+        
+        .slider {
+            grid-area: slider; 
+        }
+        
+        #next { 
+            grid-area: next; 
+        }
+
+        .dot {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #eaeaea;
+            border: 3px solid #fcfcfb;
+            outline: 1px solid #9b9a9c;
+            box-shadow: 0 0 2px 2px #bfbebe;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            opacity: 0.8;
+        }
+
+        .dot:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s;
+        }
+
+        .dot.active {
+            background-color: black;
+            transition: transform 0.5s;
+        }
+
+        .control-block {
+            grid-area: control;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            height: 40px;
+            gap: 15px;
+        }
+
+        .control {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: #eaeaea;
+            border: 3px solid #fcfcfb;
+            outline: 1px solid #9b9a9c;
+            box-shadow: 0 0 2px 2px #bfbebe;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #stop {
+            padding-right: 0.5px;
+        }
+
+        #play {
+            padding-left: 2px;
+        }
+
+        #stop.hover, #play.hover {
+            transform: scale(1.1);
+            transition: transform 0.5s;
+        }
+
+        #stop.active svg, #play.active svg {
+            fill: black;
+            transition: transform 0.5s;
+        }

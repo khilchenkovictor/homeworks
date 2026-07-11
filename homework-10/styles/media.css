@@ -1,0 +1,138 @@
+@media (max-width: 1200px) {
+    .content {
+        width: 960px;
+    }
+    .video-player {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content {
+        width: 768px;
+    }
+
+    .projects .content {
+        flex-wrap: wrap;
+    }
+
+    .project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        width: 141px;
+        height: 50px;
+        flex: 0 0 32%;
+    }
+
+    .text-block {
+        margin: 0;
+    }
+
+    .video .content {
+        height: 800px;
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 792px) {
+
+    .menu-links {
+        width: auto;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .main-menu {
+        padding-top: 59px;
+        padding-bottom: 59px;
+    }
+
+    .about .title, .about .discription {
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .video .title, .video .discription {
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero .content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .video .content {
+        height: auto
+    }
+
+    .video-player {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .play-icon {
+        height: 70px;
+        width: 70px;
+    }
+
+    .footer .content {
+        padding-left: 12px;
+    }
+
+    .projects .content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero .content {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .discription {
+        font-size: 14px;
+    }
+
+    .hero .title {
+        font-size: 44px;
+    }
+
+    .about .title, .video .title {
+        font-size: 28px;
+    }
+
+    .author {
+        font-size: 19px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+
+    .content {
+        width: 100%;
+    }
+    .project {
+        margin: 15px;
+        
+    }
+    .projects .content {
+        height: 350px;
+    }
+}
