@@ -1,0 +1,228 @@
+
+/* Основные стили, которые есть на всех страницах */
+
+.title-block {
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    border: 3px solid rgb(81, 81, 119);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    min-height: 150px;
+}
+
+
+.title { 
+    color:rgb(81, 81, 119);
+    font-style: normal;
+    text-align: center;
+}
+
+.second-small-title { 
+    color:rgb(81, 81, 119);
+    font-style: normal;
+    text-align: center;
+}
+
+.main-menu-block {
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%;
+    border: 3px solid rgb(81, 81, 119);
+}
+
+.main-menu-text { 
+    color:rgb(81, 81, 119);
+    font-style: normal;
+    text-align: center;
+    font-size: 20px;
+}
+
+.main-menu { 
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    border: 2px solid rgb(81, 81, 119);
+    border-radius: 20%;
+    padding: 10px;
+    background-color: rgb(81, 142, 74);
+    text-shadow: 1px 1px 0 black;
+
+}
+
+.main-menu-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu-block li {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.main-block { 
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.footer-block { 
+    border-top: 3px solid rgb(81, 81, 119);
+    margin-top: 10px;
+
+}
+ .footer-text {
+    text-align: center;
+
+}
+
+small {
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 17px;
+}
+
+td {
+    padding: 10px;
+    border: 2px solid rgb(81, 81, 119);
+
+}
+
+table {
+    border-spacing: 20px;
+
+}
+
+img {
+    border: 2px solid rgb(81, 81, 119);
+
+}
+
+/* Стили форм, которые идут на странице форм  */
+
+.type-name {
+    display: block;
+    margin: 15px;
+}
+
+fieldset {
+    margin: 20px;
+    border: 2px solid rgba(193, 124, 22, 0.875);
+}
+
+legend {
+    color: rgba(193, 124, 22, 0.875);
+    text-shadow: 0px 1px 0 black;
+
+}
+
+.form-1 {
+    display: block;
+    margin: 10px;
+
+}
+
+.reg-input {
+    display: block;
+    margin: 10px;
+}
+
+/* КНОПКИ  */
+
+.reg-submit {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: 2px solid rgba(135, 83, 4, 0.875);
+    background-color: rgba(193, 124, 22, 0.875);
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    cursor: pointer;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    margin-left: 40px;
+    border: 2px solid rgba(135, 83, 4, 0.875);
+    background-color: rgba(193, 124, 22, 0.875);
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    cursor: pointer;
+}
+
+.submit-button-2 {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: 2px solid rgba(135, 83, 4, 0.875);
+    background-color: rgba(193, 124, 22, 0.875);
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    cursor: pointer;
+}
+
+.forms-for-input {
+    text-align: center;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(202, 130, 130, 0.3);
+}
+
+.adv-line {
+    padding: 10px;
+    border: 3px solid grey;
+    border-radius: 12px;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 4px rgba(202, 130, 130, 0.3);
+}
+
+.adv-list {
+    display: flex;
+    justify-content: center;
+}
+
+.text-article {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+ 
+.titile-article {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: blue;
+    padding-bottom: 10px;
+    border-bottom: 3px solid blue
+}
+
+.anchor-element {
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.anchor-element-li {
+    list-style: none;
+    margin: 4px;
+    font-weight: bold;
+}
+
+.contacts-block-1 {
+    border: 3px double gray;
+    padding: 20px;
+
+}
+.contacts-block-2 {
+    border: 3px double gray;
+    padding: 20px;
+
+}

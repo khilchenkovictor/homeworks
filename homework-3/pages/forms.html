@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>ФОРМИ</title>
+
+    <style>
+    .city-selector {
+        padding: 10px 20px;
+        border: 2px solid rgba(135, 83, 4, 0.875);
+        background-color: rgba(193, 124, 22, 0.875);
+        color: white;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="title-block">
+        <h1 class="title">Форми</h1>
+        <h2 class="second-small-title">Підзаголовок сторінки форм</h2>
+    </div>
+    <div class="main-menu-block">
+        <p class="main-menu-text">Меню для переходу між сторінками:</p>
+        <ul>
+            <li><a href="../index.html" class="main-menu">Головна</a></li>
+            <li><a href="about.html" class="main-menu">Про нас</a></li> 
+            <li><a href="articles.html" class="main-menu">Статті</a></li>
+            <li><a href="contacts.html" class="main-menu">Контакти</a></li>
+            <li><a href="gallery.html" class="main-menu">Галерея</a></li>
+            <li><a href="forms.html" class="main-menu">Форми для заповнення</a></li>
+            <li><a href="anchors.html" class="main-menu">Якоря</a></li>
+        </ul>
+    </div>
+    <div>
+       <h3 class="forms-for-input">Форми для заповненния</h3>
+            <form>
+                <fieldset>
+                    <legend>Залиште почту та телефон для зв'язку</legend>
+                    <label>Впишіть Email:</label>
+                    <input type="email" name="email-field" class="form-1">
+                    <label>Введіть свій номер телефону:</label>
+                    <input type="number" name="phone-number-field" class="form-1">
+                    <input type="button" name="send-button" value="Кнопка" class="submit-button-2">
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                    <legend>Зробіть замовлення</legend>
+                    <label class="type-name">Виберіть колір:</label>
+                    <input type="radio" name="color" value="red"><label class="radio-label">Червоний</label>
+                    <input type="radio" name="color" value="blue"><label class="radio-label">Синій</label>
+                    <input type="radio" name="color" value="green"><label class="radio-label">Зелений</label>
+                    <input type="radio" name="color" value="white"><label class="radio-label">Білий</label>
+                    <input type="radio" name="color" value="black"><label class="radio-label">Чорний</label>
+                    <input type="radio" name="color" value="red"><label class="radio-label">Рудий</label>
+                    <label class="type-name">Віберить виробників продукцію яких ви би хотіли придбати:</label>
+                    <input type="checkbox" name="companies" value="company-1"><label class="other-label">Виробник 1</label>
+                    <input type="checkbox" name="companies" value="company-2"><label class="other-label">Виробник 2</label>
+                    <input type="checkbox" name="companies" value="company-3"><label class="other-label">Виробник 3</label>
+                    <input type="checkbox" name="companies" value="company-4"><label class="other-label">Виробник 4</label>
+                    <input type="checkbox" name="companies" value="company-5"><label class="other-label">Виробник 5</label>
+                </fieldset> 
+            </form>
+            <form>
+                <fieldset>
+                    <legend>Оберіть місто:</legend>
+                    <select name="city" class="city-selector">
+                            <option value="kiev">Київ</option>
+                            <option value="lviv">Львів</option>
+                            <option value="odesa">Одеса</option>
+                    </select>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                <legend>Реєстрація:</legend>
+                    <label>Ім'я:</label>
+                    <input type="text" name="name" class="reg-input">
+                    <label>Email:</label>
+                    <input type="email" name="email" class="reg-input">
+                    <label>Пароль:</label>
+                    <input type="password" name="password" class="reg-input">
+                    <label>Вік:</label>
+                    <input type="number" name="age" min="3" max="130" class="reg-input">
+                    <label>Дата народження:</label>
+                    <input type="date" name="birthdate" class="reg-input">
+                    <input type="submit" value="Зареєструватися" class="reg-submit">
+                    <input type="reset" value="Очистити" class="reg-submit">
+                </fieldset>
+            </form>
+        <input type="submit" name="send-button-2" value="Відправити" class="submit-button">
+    </div>
+    <div class="footer-block">
+        <p class="footer-text">Якийсь футер</p>
+    </div>
+</body>
+</html>
