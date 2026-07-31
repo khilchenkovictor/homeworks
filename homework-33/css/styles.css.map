@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["styles.scss"],"names":[],"mappings":"AACI;EACI;EACA","sourcesContent":["body {\r\n    p {\r\n        color: red;\r\n        background-color: green;\r\n    }\r\n}"],"file":"styles.css"}
