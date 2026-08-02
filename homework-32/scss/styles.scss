@@ -1,21 +1,17 @@
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .film-list {
     background-color: rgba(179, 179, 146, 0.347);
-    height: 100%;
-    width: 370px;
     display: flex;
+    justify-content: start;
     flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
 
     .movie-item {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         padding: 20px;
+        width: 370px;
 
         img {
             width: 100%;
@@ -28,6 +24,12 @@ main {
             font-family: 'Tahoma', 'verdana', 'sans-serif';
         }
     }
+
+        #movieList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 }
 
 #movieSearch {
@@ -37,7 +39,8 @@ main {
         left: auto;
         right: auto;
     }
-    width: 50%;
+    width: 185px;
+    max-height: 16px;
 }
 
 .movie-not-found {

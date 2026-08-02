@@ -32,6 +32,7 @@ async function searchBy(title = '') {
 function renderMovies(movies) {
     clearSearch()
     movieList.innerHTML = '';
+    console.log(movies)
 
     if (Array.isArray(movies.Search) && movies.Search.length >= 1) {
         movies.Search.forEach(movie => {
