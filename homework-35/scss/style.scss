@@ -1,0 +1,24 @@
+body {
+    background-color: palegreen;
+
+    p {
+        color: red;
+        clip-path: circle();
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@font-face {
+    font-family: 'DutchCoffeeRegular';
+    src: url('./fonts/DutchCoffeeRegular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: palegreen;
+    font-family: 'DutchCoffeeRegular', sans-serif;
+}
+
+// comment
