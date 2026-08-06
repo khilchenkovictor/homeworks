@@ -62,7 +62,7 @@ type User = {
 function createUser(
   name: string,
   age: number,
-  isActive?: boolean) {
+  isActive?: boolean): User {
 
     const obj = {
       name: '',
