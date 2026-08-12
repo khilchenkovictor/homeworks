@@ -11,4 +11,4 @@ npm run dev
 npm install
 
 
-Deployed on Vercel: 
+Deployed on Vercel: https://homework-39-sigma.vercel.app/
