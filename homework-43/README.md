@@ -12,4 +12,4 @@ npm run dev
 
 ## Deployed on Vercel
 
-Link: 
+Link: https://homework-43-self.vercel.app/
