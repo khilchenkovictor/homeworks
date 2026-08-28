@@ -7,19 +7,18 @@ const Div = styled.div`
     margin: 0;
     display: flex;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 25px;
     border: 2px solid grey;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 16px;
     border-radius: 10px;
 `;
 
 const Loading = styled.p`
-    font-size: 30px;
+    font-size: 25px;
 `;
 
 const Error = styled.p`
-    font-size: 30px;
+    font-size: 25px;
     color: red;
 `;
 
