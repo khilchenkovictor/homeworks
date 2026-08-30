@@ -1,0 +1,19 @@
+.card, .page, .user-info {
+    display: flex;
+    gap: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+}
+
+.page {
+    max-width: 600px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.info-block {
+    border-left: 1px solid grey;
+    padding: 20px;
+}
