@@ -10,4 +10,4 @@ npm run build
 
 ### Deployed on Vercel
 
-Link: 
+Link: https://homework-44-chi.vercel.app/
