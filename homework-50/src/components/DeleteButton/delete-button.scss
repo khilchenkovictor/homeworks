@@ -1,0 +1,22 @@
+.button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,41 @@
+.user {
+
+    &__item {
+        display: flex;
+        padding: {
+            left: 30px;
+            right: 30px;
+        }
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
+        border: 1px solid #cfd8dc;
+        height: 60px;
+        border-radius: 5px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    &__id {
+
+    }
+
+    &__username {
+
+    }
+
+    &__name {
+
+    }
+
+    &__surname {
+
+    }
+
+    &__photo {
+
+    }
+
+    &__status {
+
+    }
+}

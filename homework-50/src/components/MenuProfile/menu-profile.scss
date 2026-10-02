@@ -1,0 +1,31 @@
+.menu {
+
+    &__profile {
+        position: relative;
+    }
+
+    &__avatar {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+    }
+
+    &__settings-button {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background-color: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__settings-icon {
+        width: 30px;
+        height: 30px;
+        margin: 12px;
+    }
+}
