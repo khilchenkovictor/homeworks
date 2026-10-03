@@ -1,6 +1,6 @@
 ### Project
 
-In this project i create an app that allow to view and filter information about Telegram users saved in JSON file, that was exported from SQLite database
+In this project i create an app that allow to view and filter information about Telegram users saved in JSON file, that was exported from SQLite database. I use React useMemo and useCallback here.
 
 ### Run
 npm run dev

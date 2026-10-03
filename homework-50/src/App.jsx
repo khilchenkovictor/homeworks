@@ -1,10 +1,39 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import SideMenu from "./components/SideMenu";
-import UserItem from "./components/UserItem";
 import UserList from "./components/UserList";
 import usersData from './data/users.json';
 import "./styles/styles.scss";
-import FilterPanel from "./components/FilterPanel";
+
+const checkSearchMatch = (user, query) => {
+  const [id, username, firstName, lastName, photo, status] = user;
+
+  return (
+    firstName?.toLowerCase().includes(query) ||
+    username?.toLowerCase().includes(query) ||
+    status?.toLowerCase().includes(query) ||
+    lastName?.toLowerCase().includes(query) ||
+    String(id)?.includes(query)
+  );
+};
+
+const checkStatusMatch = (status, filter) => {
+  if (filter === 'all') return true;
+  return status === filter;
+};
+
+const checkPhotoMatch = (photo, filter) => {
+  if (filter === 'all') return true;
+  if (filter === 'yes') return photo === 1;
+  if (filter === 'no') return photo === 0;
+  return true;
+};
+
+const checkLastNameMatch = (lastName, filter) => {
+  if (filter === 'all') return true;
+  if (filter === 'yes') return Boolean(lastName);
+  if (filter === 'no') return !lastName;
+  return true;
+};
 
 function App() {
 
@@ -18,34 +47,49 @@ function App() {
   const itemsPerPage = 100;
 
   const filteredUsers = useMemo(() => {
-    return users.filter(([id, username, firstName, lastName, photo, status]) => {
-      const query = search.toLowerCase();
+    const query = search.toLowerCase();
 
-      const matchesSearch = (
-        firstName?.toLowerCase().includes(query) ||
-        username?.toLowerCase().includes(query) ||
-        status?.toLowerCase().includes(query) ||
-        lastName?.toLowerCase().includes(query) ||
-        String(id)?.includes(query)
-      );
+    return users.filter((user) => {
+      const matchesSearch = checkSearchMatch(user, query);
+      const [id, username, firstName, lastName, photo, status] = user;
 
-      const matchesStatus = statusFilter === 'all' || status === statusFilter;
-      const matchesPhoto = photoFilter === 'all' || (photoFilter === 'yes' ? photo === '1' : photo === '-');
-      const matchesLastName = lastNameFilter === 'all' || (lastNameFilter === 'yes' ? lastName : !lastName);
+      const matchesStatus = checkStatusMatch(status, statusFilter);
+      const matchesPhoto = checkPhotoMatch(photo, photoFilter);
+      const matchesLastName = checkLastNameMatch(lastName, lastNameFilter);
 
       return matchesSearch && matchesStatus && matchesPhoto && matchesLastName;
     });
   }, [users, search, statusFilter, photoFilter, lastNameFilter]);
-
-  const handleDeleteUser = (userId) => {
-    setUsers(users.filter(user => user[0] !== userId));
-  };
 
   const totalPages = Math.ceil(filteredUsers.length / itemsPerPage);
   const paginatedUsers = filteredUsers.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
+
+  const handleDeleteUser = useCallback((userId) => {
+    setUsers((prevUsers) => prevUsers.filter((user) => user[0] !== userId));
+  }, []);
+
+  const handleSearchChange = useCallback((value) => {
+    setSearch(value);
+  }, []);
+
+  const handleStatusFilterChange = useCallback((value) => {
+    setStatusFilter(value);
+  }, []);
+
+  const handlePhotoFilterChange = useCallback((value) => {
+    setPhotoFilter(value);
+  }, []);
+
+  const handleLastNameFilterChange = useCallback((value) => {
+    setLastNameFilter(value);
+  }, []);
+
+  const handlePageChange = useCallback((page) => {
+    setCurrentPage(page);
+  }, []);
 
   return (
     <div className="app">
@@ -55,20 +99,20 @@ function App() {
           users={paginatedUsers}
           onDeleteUser={handleDeleteUser}
           search={search}
-          onSearchChange={setSearch}
+          onSearchChange={handleSearchChange}
           statusFilter={statusFilter}
-          setStatusFilter={setStatusFilter}
+          setStatusFilter={handleStatusFilterChange}
           photoFilter={photoFilter}
-          setPhotoFilter={setPhotoFilter}
+          setPhotoFilter={handlePhotoFilterChange}
           lastNameFilter={lastNameFilter}
-          setLastNameFilter={setLastNameFilter}
+          setLastNameFilter={handleLastNameFilterChange}
           currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
+          setCurrentPage={handlePageChange}
           totalPages={totalPages}
         />
       </main>
     </div>
-  )
+  );
 }
 
 export default App;
