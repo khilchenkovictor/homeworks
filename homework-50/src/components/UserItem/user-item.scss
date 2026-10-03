@@ -1,41 +1,60 @@
 .user {
-
     &__item {
         display: flex;
+        align-items: center;
+
         padding: {
             left: 30px;
             right: 30px;
         }
-        align-items: center;
-        justify-content: space-around;
+
         background-color: white;
         border: 1px solid #cfd8dc;
         height: 60px;
         border-radius: 5px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Open Sans',
+        sans-serif;
     }
 
     &__id {
-
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__username {
-
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__name {
-
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__surname {
-
+        width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__photo {
-
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__status {
-
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }

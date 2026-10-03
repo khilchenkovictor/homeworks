@@ -2,32 +2,52 @@ import { memo } from 'react';
 import './user-item.scss';
 import DeleteButton from '../DeleteButton';
 
-function UserItem({ user }) {
+function UserItem({ user, onSelectUser, onDeleteUser }) {
 
     const [id, username, firstName, lastName, photo, status] = user;
+
+    const handleDelete = () => {
+        onDeleteUser(id);
+    };
+
+    const displayValue = (value) => value ? value : '-';
+    const displayPhoto = photo === 1 ? 'Так' : photo === 0 ? 'Ні' : '-';
+
+    const statusMap = {
+        'UserStatusLastMonth': 'LastMonth',
+        'UserStatusLastWeek': 'LastWeek',
+        'UserStatusRecently': 'Recently',
+        'UserStatusOnline': 'Online',
+        'UserStatusOffline': 'Offline'
+    };
+
+    const displayStatus = status ? (statusMap[status] || status) : '-';
+
     return(
         <div className='user__item'>
             <span className='user__id'>
-                {id}
+                {displayValue(id)}
             </span>
             <span className='user__username'>
-                {username}
+                {displayValue(username)}
             </span>
             <span className='user__name'>
-                {firstName}
+                {displayValue(firstName)}
             </span>
             <span className='user__surname'>
-                {lastName}
+                {displayValue(lastName)}
             </span>
             <span className='user__photo'>
-                {photo}
+                {displayPhoto}
             </span>
             <span className='user__status'>
-                {status}
+                {displayStatus}
             </span>
-            <DeleteButton />
+            <DeleteButton
+                onClick={handleDelete}
+            />
         </div>
     );
 }
 
-export default UserItem;
+export default memo(UserItem);

@@ -4,7 +4,7 @@ import trash from '@assets/trash.svg';
 function DeleteButton({ onClick }) {
 
     return (
-        <div>
+        <div className='button__container'>
             <button className="button" type="button" onClick={onClick}>
                 <img src={trash} alt="Видалити" className="button__icon" />
             </button>
