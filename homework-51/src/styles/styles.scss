@@ -1,0 +1,26 @@
+@use "./reset";
+@use "../components/components-styles.scss";
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Gilroy', sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__content {
+        border: 1px solid lightgray;
+        border-radius: 5%;
+        padding: 20px;
+
+    }
+}
